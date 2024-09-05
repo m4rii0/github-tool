@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- Broken issue details after GitHub added new [Issue Types](https://github.com/orgs/community/discussions/112806) and [Sub-issues](https://github.com/orgs/community/discussions/131957)
+
+## [1.2.3] - 2024-09-05
+
+### Fixed
+
 - Broken header selector after GitHub added new [Issue Types](https://github.com/orgs/community/discussions/112806) and [Sub-issues](https://github.com/orgs/community/discussions/131957)
 
 ## [1.2.2] - 2023-01-13
