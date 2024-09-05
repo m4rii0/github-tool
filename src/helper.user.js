@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Github helper
 // @namespace    https://github.com/m4rii0
-// @version      1.2.3
+// @version      1.2.4
 // @description  Github helper to speed up your work
 // @author       m4rii0
 // @match        https://github.com/*
@@ -101,17 +101,17 @@
   }
 
   const getBranchName = () => {
-    let title = document.querySelector('h1 > bdi.js-issue-title').innerText;
+    let title = document.querySelector('[data-testid="issue-title"], h1 > bdi.js-issue-title').textContent;
     title = title
               .trim()
               .toLowerCase()
               .replaceAll(' ', '-')
               .replace(/[^\w\-]+/g, '');
 
-    let issueId = document.querySelector('h1 > .f1-light').innerText;
+    let issueId = document.querySelector('[data-testid="issue-title"] + div>a, h1 > .f1-light').textContent;
     issueId = issueId.replace('#', '');
 
-    let kind = [...document.querySelectorAll('.js-issue-labels a span')].map(e => e.innerText).find(e => e.startsWith('kind/'));
+    let kind = [...document.querySelectorAll('[data-testid="issue-labels"] > a > span, .js-issue-labels > a > span')].map(e => e.textContent).find(e => e.startsWith('kind/'));
     if (!kind) kind = 'CHANGEME';
 
     kind = kind.replace('kind/', '');
