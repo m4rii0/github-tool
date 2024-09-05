@@ -43,7 +43,7 @@
   }
 
   const createButton = () => {
-    const header = document.querySelector('.gh-header-actions');
+    const header = document.querySelector('[data-component=\'PH_Actions\'] > div, .gh-header-actions');
     if (!header) return;
 
     let button = document.createElement('button');
