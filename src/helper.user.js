@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Github helper
 // @namespace    https://github.com/m4rii0
-// @version      1.2.2
+// @version      1.2.3
 // @description  Github helper to speed up your work
 // @author       m4rii0
 // @match        https://github.com/*
@@ -43,7 +43,7 @@
   }
 
   const createButton = () => {
-    const header = document.querySelector('.gh-header-actions');
+    const header = document.querySelector('[data-component=\'PH_Actions\'] > div, .gh-header-actions');
     if (!header) return;
 
     let button = document.createElement('button');
