@@ -107,6 +107,7 @@ A fresh installation is required to use the new remote name and get updates auto
 
 - First release
 
+[1.2.4]: https://github.com/m4rii0/github-helper/tree/1.2.4
 [1.2.3]: https://github.com/m4rii0/github-helper/tree/1.2.3
 [1.2.2]: https://github.com/m4rii0/github-helper/tree/1.2.2
 [1.2.1]: https://github.com/m4rii0/github-helper/tree/1.2.1
