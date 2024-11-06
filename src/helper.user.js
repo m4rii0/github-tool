@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Github helper
 // @namespace    https://github.com/m4rii0
-// @version      1.2.4
+// @version      1.2.5
 // @description  Github helper to speed up your work
 // @author       m4rii0
 // @match        https://github.com/*
@@ -108,7 +108,7 @@
               .replaceAll(' ', '-')
               .replace(/[^\w\-]+/g, '');
 
-    let issueId = document.querySelector('[data-testid="issue-title"] + div>a, h1 > .f1-light').textContent;
+    let issueId = document.querySelector('[data-testid="issue-title"] + span, h1 > .f1-light').textContent;
     issueId = issueId.replace('#', '');
 
     let kind = [...document.querySelectorAll('[data-testid="issue-labels"] > a > span, .js-issue-labels > a > span')].map(e => e.textContent).find(e => e.startsWith('kind/'));
